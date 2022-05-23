@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Minimal TodoList</string>
+    <string name="item_name">Item name</string>
+    <string name="save">save</string>
+</resources>

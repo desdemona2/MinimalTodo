@@ -8,37 +8,42 @@
 
     <LinearLayout
         android:id="@+id/useless"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:weightSum="10"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp">
+        android:layout_marginHorizontal="10dp"
+        android:weightSum="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/item_name"
             android:layout_weight="9"
+            android:hint="@string/item_name"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/item"
+                android:inputType="text"
+                android:importantForAutofill="no"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+                android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/save"
-            android:text="@string/save"
-            android:textSize="22sp"
+            style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/Widget.Material3.Button.TextButton"
-            />
+            android:text="@string/save"
+            android:textSize="22sp" />
 
     </LinearLayout>
 
@@ -47,11 +52,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/useless"
         android:layout_marginTop="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/useless" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
